@@ -33,6 +33,37 @@
 		display: block;
 	}
 
+	#grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* see notes below */
+		grid-gap: 1em;
+	  }
+	  
+	  #grid > section {
+		background-color: #ccddaa;
+	  }
+
+	/* Float four columns side by side */
+.column {
+	/* float: center; */
+	width: 100%;
+	padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+	nav{
+		text-transform: uppercase;
+
+	}
 	body {
 		line-height: 1;
 	}
@@ -81,11 +112,13 @@
 
 	.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
 		color: #28a4a775;
-		;
+		
+		
 	}
 
 	.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
 		color: #28a4a775;
+
 	}
 	.bg-light {
 		background-color: #28a4a775 !important;
@@ -174,7 +207,6 @@
 		font-weight: 300;
 		line-height: 2;
 		letter-spacing: 0.2em;
-		text-transform: uppercase;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -224,12 +256,15 @@
 
 	p {
 		margin: 0 0 1.5em 0;
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #313f47;
 		line-height: 1.5;
 		margin: 0 0 0.75em 0;
+		text-transform: uppercase;
+
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
